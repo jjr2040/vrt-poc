@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('VRT') {
       steps {
-        sh 'yarn run cypress run -s \'cypress/integration/taller/color-palette.spec.js\''
-        sh 'node vrt.js'
+        nodejs('nodejs') {
+          sh 'yarn run cypress run -s \'cypress/integration/taller/color-palette.spec.js\''
+          sh 'node vrt.js'
+        }
+
       }
     }
 
