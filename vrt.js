@@ -21,17 +21,27 @@ async function diffImages() {
   };
 
   const screenshotsDir = './cypress/screenshots/taller/color-palette.spec.js/';
-
-  const imageOne = await fs.readFile(screenshotsDir + 'color-palette-one.png');
-  const imageTwo = await fs.readFile(screenshotsDir + 'color-palette-two.png');
+  const imageOneName = 'color-palette-one.png';
+  const imageTwoName = 'color-palette-two.png';
+  const imageOutputName = 'output.png';
+  const imageOnePath = screenshotsDir + imageOneName;
+  const imageTwoPath = screenshotsDir + imageTwoName;
+  const imageOne = await fs.readFile(imageOnePath);
+  const imageTwo = await fs.readFile(imageTwoPath);
   const data = await compareImages(imageOne, imageTwo, options);
 
-  await fs.writeFile(screenshotsDir + 'output.png', data.getBuffer());
+  await fs.writeFile(screenshotsDir + imageOutputName, data.getBuffer());
+
+  const outputScreenshotsDir = './output/images/screenshots/'
+
+  await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName);
+  await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName);
+  await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName);
 
   const templateData = { 
-    imageOneName: 'color-palette-one.png', 
-    imageTwoName: 'color-palette-two.png', 
-    imageComparedName: 'output.png' 
+    imageOneName: imageOneName, 
+    imageTwoName: imageTwoName, 
+    imageComparedName: imageOutputName
   };
   const report = await ejs.renderFile('./templates/vrt-report.ejs', templateData, { async: true });
 

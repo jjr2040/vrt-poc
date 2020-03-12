@@ -118,3 +118,4 @@ dist
 
 cypress/screenshots/
 cypress/videos/
+output/images/
