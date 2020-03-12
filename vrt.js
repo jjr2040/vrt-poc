@@ -28,7 +28,12 @@ async function diffImages() {
 
   await fs.writeFile(screenshotsDir + 'output.png', data.getBuffer());
 
-  const report = await ejs.renderFile('./templates/vrt-report.ejs', { names: ['Juan', 'Jose', 'Villegas'] }, { async: true });
+  const templateData = { 
+    imageOneName: 'color-palette-one.png', 
+    imageTwoName: 'color-palette-two.png', 
+    imageComparedName: 'output.png' 
+  };
+  const report = await ejs.renderFile('./templates/vrt-report.ejs', templateData, { async: true });
 
   fs.writeFile('./output/index.html', Buffer.from(report));
 };

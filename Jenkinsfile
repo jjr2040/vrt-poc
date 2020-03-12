@@ -13,7 +13,7 @@ pipeline {
           keepAll: true, 
           reportDir: 'output', 
           reportFiles: 'index.html', 
-          reportName: 'HTML Report', 
+          reportName: 'VRT HTML Report', 
           reportTitles: ''])
 
       }

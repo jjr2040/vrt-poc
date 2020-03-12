@@ -11,16 +11,11 @@
     <title>VRT Report</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    
-    <% if (names.length) { %>
-      <ul>
-        <% names.forEach( name => { %>
-          <%# Notice how the single quotation mark is escaped in the output HTML %>
-          <li foo='<%= name + "'" %>'><%= name %></li>
-        <% }) %>
-      </ul>
-    <% } %>
+    <h1>VRT Report</h1>
+
+    <img src="../../cypress/screenshots/<%= imageOneName %>" class="rounded float-left" >
+    <img src="../../cypress/screenshots/<%= imageTwoName %>" class="rounded float-left" >
+    <img src="../../cypress/screenshots/<%= imageComparedName %>" class="rounded float-left" >
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
