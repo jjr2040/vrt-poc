@@ -26,17 +26,20 @@ async function diffImages() {
   const imageOutputName = 'output.png';
   const imageOnePath = screenshotsDir + imageOneName;
   const imageTwoPath = screenshotsDir + imageTwoName;
+  const imageOutputPath = screenshotsDir + imageOutputName;
   const imageOne = await fs.readFile(imageOnePath);
   const imageTwo = await fs.readFile(imageTwoPath);
   const data = await compareImages(imageOne, imageTwo, options);
 
-  await fs.writeFile(screenshotsDir + imageOutputName, data.getBuffer());
+  await fs.writeFile(imageOutputPath, data.getBuffer());
 
   const outputScreenshotsDir = './output/images/screenshots/'
 
-  await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName);
+  await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName).catch( err => {
+    console.log('Error copying image: ' +  err);
+  });
   await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName);
-  await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName);
+  await fs.copyFile(imageOutputPath, outputScreenshotsDir + imageOutputName);
 
   const templateData = { 
     imageOneName: imageOneName, 
