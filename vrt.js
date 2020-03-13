@@ -35,6 +35,10 @@ async function diffImages() {
 
   const outputScreenshotsDir = './output/images/screenshots/'
 
+  if ( !fs.existsSync(outputScreenshotsDir)) {
+    await fs.mkdir(outputScreenshotsDir);
+  }
+  
   await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName).catch( err => {
     console.log('Error copying image: ' +  err);
   });
