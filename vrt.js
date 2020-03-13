@@ -36,7 +36,7 @@ async function diffImages() {
   const outputScreenshotsDir = './output/images/screenshots/'
 
   if ( !fs.existsSync(outputScreenshotsDir)) {
-    await fs.mkdir(outputScreenshotsDir);
+    await fs.mkdir(outputScreenshotsDir, { recursive: true });
   }
   
   await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName).catch( err => {
