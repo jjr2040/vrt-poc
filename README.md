@@ -102,20 +102,21 @@ Este es el gif con la interacción:
 
 A continuación los pantallasos de los pasos para verlos más claramente:
 
-**Builds**
+### Builds
+
 ![Builds](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/builds.png)
 
-**Correr el pipeline**
+### Correr el pipeline
 ![Run Pipeline](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/run-task.png)
 
-**Pipeline corriendo**
+### Pipeline corriendo
 ![Pipeline running](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/task-running.png)
 
-**Pipeline termina**
+### Pipeline termina
 ![task finished](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/finished-running.png)
 
-**Se muestran los artefactos**
+### Se muestran los artefactos
 ![Artefacts](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/artifacts.png)
 
-**Se despliega el reporte**
+### Se despliega el reporte
 ![Report](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/report.png)
