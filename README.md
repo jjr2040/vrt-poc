@@ -98,7 +98,7 @@ Para automatizar VRT se construyó un pipeline de jenkins con 4 pasos:
 
 Este es el gif con la interacción: 
 
-![Gif](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/vrt-jenkins.gif)
+![Gif](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/vrt-jenkins-v2.gif)
 
 A continuación los pantallasos de los pasos para verlos más claramente:
 
