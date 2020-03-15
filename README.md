@@ -95,3 +95,27 @@ Para automatizar VRT se construyó un pipeline de jenkins con 4 pasos:
 3) Se corre el script que toma los screenshot con cypress 
 4) Se corre un script que compara las imágenes con ResembleJS y guarda su output. Después copia el resultado del paso anterior en un folder dentro del workspace donde va a estar el reporte. Por último, se renderiza el reporte utilizando EJS por medio de un template. 
 5) Se publica el reporte como artefacto para ser consultado
+
+Este es el gif con la interacción: 
+
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/vrt-jenkins.gif]
+
+A continuación los pantallasos de los pasos para verlos más claramente:
+
+**Builds**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/builds.png]
+
+**Correr el pipeline**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/run-task.png]
+
+**Pipeline corriendo**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/task-running.png]
+
+**Pipeline termina**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/finished-running.png]
+
+**Se muestran los artefactos**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/artifacts.png]
+
+**Se despliega el reporte**
+![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/report.png]
