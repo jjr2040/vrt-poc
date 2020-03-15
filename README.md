@@ -16,13 +16,19 @@ Life Preview: https://random-color-palette.glitch.me
 
 ## Cypress Screenshots
 
+Por simplicidad sólo se muestran a continuación los outputs de ResembleJS. Para ver todas las imágenes, puede referirse a este link: https://github.com/jjr2040/vrt-poc/tree/master/assets/taller2-screenshots
+
 ### Login Correcto
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Login](https://github.com/jjr2040/vrt-poc/raw/master/assets/taller2-screenshots/1-login_correcto_spec.js/output.png)
 
 ### Detalle profesor
 
+![Detalle profesor](https://github.com/jjr2040/vrt-poc/raw/master/assets/taller2-screenshots/3-profesor_spec.js/output.png)
+
 ### Buscar profesor
+
+![Busqueda profesor](https://github.com/jjr2040/vrt-poc/raw/master/assets/taller2-screenshots/4-search_teacher.js/output.png)
 
 **Ve usted algún problema con los screenshots tomados por Cypress al intentar hacer Visual Regression Testing?**
 
@@ -82,3 +88,10 @@ ignore: "antialiasing" // Puede ser "nothing", "less", "antialiasing", "colors" 
 
 ## Herramienta de automatización VRT con Jenkins
 
+Para automatizar VRT se construyó un pipeline de jenkins con 4 pasos: 
+
+1) Se descarga del repo la última versión de la herramienta
+2) Se instalan las dependencias con yarn
+3) Se corre el script que toma los screenshot con cypress 
+4) Se corre un script que compara las imágenes con ResembleJS y guarda su output. Después copia el resultado del paso anterior en un folder dentro del workspace donde va a estar el reporte. Por último, se renderiza el reporte utilizando EJS por medio de un template. 
+5) Se publica el reporte como artefacto para ser consultado
