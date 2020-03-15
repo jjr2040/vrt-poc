@@ -17,7 +17,7 @@ async function diffImages() {
       outputDiff: true
     },
     scaleToSameSize: true,
-    ignore: 'antialiasing'
+    ignore: 'less'
   };
 
   const screenshotsDir = './cypress/screenshots/taller/color-palette.spec.js/';
@@ -42,13 +42,18 @@ async function diffImages() {
   await fs.copyFile(imageOnePath, outputScreenshotsDir + imageOneName).catch( err => {
     console.log('Error copying image: ' +  err);
   });
-  await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName);
-  await fs.copyFile(imageOutputPath, outputScreenshotsDir + imageOutputName);
+  await fs.copyFile(imageTwoPath, outputScreenshotsDir + imageTwoName).catch( err => {
+    console.log('Error copying image: ' +  err);
+  });
+  await fs.copyFile(imageOutputPath, outputScreenshotsDir + imageOutputName).catch( err => {
+    console.log('Error copying image: ' +  err);
+  });
 
   const templateData = { 
     imageOneName: imageOneName, 
     imageTwoName: imageTwoName, 
-    imageComparedName: imageOutputName
+    imageComparedName: imageOutputName,
+    misMatchPercentage: data.misMatchPercentage
   };
   const report = await ejs.renderFile('./templates/vrt-report.ejs', templateData, { async: true });
 
