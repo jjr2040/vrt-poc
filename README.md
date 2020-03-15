@@ -103,19 +103,19 @@ Este es el gif con la interacción:
 A continuación los pantallasos de los pasos para verlos más claramente:
 
 **Builds**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/builds.png]
+![Builds](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/builds.png)
 
 **Correr el pipeline**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/run-task.png]
+![Run Pipeline](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/run-task.png)
 
 **Pipeline corriendo**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/task-running.png]
+![Pipeline running](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/task-running.png)
 
 **Pipeline termina**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/finished-running.png]
+![task finished](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/finished-running.png)
 
 **Se muestran los artefactos**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/artifacts.png]
+![Artefacts](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/artifacts.png)
 
 **Se despliega el reporte**
-![https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/report.png]
+![Report](https://github.com/jjr2040/vrt-poc/raw/master/assets/vrt-jenkins/screenshots/report.png)
